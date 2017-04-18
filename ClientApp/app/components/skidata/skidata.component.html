@@ -1,0 +1,16 @@
+﻿<label for="length">Längd</label>
+<input type="text" class="form-control" id="length"
+        required
+        [(ngModel)]="userInput.length" name="length"
+        #length="ngModel">    
+<!--<div [hidden]="length.valid || length.pristine"
+        class="alert alert-danger">
+    Length is required
+</div>-->
+<label for="age">Ålder</label>
+<input type="text" class="form-control" id="age"
+       required
+       [(ngModel)]="userInput.age" name="age"
+       #age="ngModel">  
+<p>{{answer.skiLength}}</p>
+<p>{{answer.comment}}</p>
