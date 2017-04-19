@@ -1,24 +1,28 @@
 ﻿<div class="container">
     <div class="form-group">
-        <label for="length">Längd</label>
+        <label for="length">Längd (cm)</label>
         <input type="text" class="form-control" id="length"
-               required
+               required maxlength="3"
                [(ngModel)]="userInput.length" name="length"
                #length="ngModel">
-        <div [hidden]="length.valid || length.pristine"
+        <div *ngIf="length.errors && (length.dirty || length.touched)"
              class="alert alert-danger">
-            Längd måste vara ifyllt
+            <div [hidden]="!length.errors.required">
+                Längd måste vara ifyllt.
+            </div>
         </div>
         <label for="age">Ålder</label>
         <input type="text" class="form-control" id="age"
-               required
+               required maxlength="3"
                [(ngModel)]="userInput.age" name="age"
                #age="ngModel">
-        <div [hidden]="age.valid || length.age"
+        <div *ngIf="age.errors && (age.dirty || age.touched)"
              class="alert alert-danger">
-            Ålder måste vara ifyllt
+            <div [hidden]="!age.errors.required">
+                Ålder måste vara ifyllt.
+            </div>
         </div>
-        <select class="form-control" id="skistyle"
+        <select class="form-control" id="skistyle" (change)="updateSkistyle(skistyle.value)"
                 required
                 [(ngModel)]="userInput.skistyle" name="skistyle"
                 #skistyle="ngModel">

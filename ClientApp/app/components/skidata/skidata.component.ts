@@ -12,15 +12,10 @@ export class SkiDataComponent implements OnInit, DoCheck {
     public answer: Answer;
     public skistyles = ['Klassisk', 'Freestyle'];
     changeLog: string[] = [];
-    oldLength; isChanged;
-
-    http;
+    oldLength; oldAge; oldSkistyle; isChanged; http;
 
     constructor(http: Http) {
         this.http = http;
-        //http.get('/api/SkiData/GetSkiLength').subscribe(result => {
-        //    this.answer = result.json() as Answer;
-        //});
     }
 
     ngOnInit() {
@@ -36,9 +31,26 @@ export class SkiDataComponent implements OnInit, DoCheck {
             this.isChanged = true;
         }
 
+        if (this.isNumeric(this.userInput.age) && this.oldAge !== this.userInput.age) {            
+            this.oldAge = this.userInput.age;
+            this.isChanged = true;
+        }
+
+        if (this.oldSkistyle !== this.userInput.skistyle) {
+            this.oldSkistyle = this.userInput.skistyle;
+            this.isChanged = true;
+        }
+
         if (this.isChanged) {
             this.changeLog.push('Calling!');
-            this.http.get('/api/SkiData/GetSkiLength/' + this.userInput.length.toString()).subscribe(result => {
+            var url = '/api/SkiData/GetSkiLength/' +
+                this.userInput.length.toString() + '/' +
+                this.userInput.age.toString() + '/' +
+                this.userInput.skistyle.toString();
+
+            this.changeLog.push('url = '  + url);
+
+            this.http.get(url).subscribe(result => {
                 this.answer = result.json() as Answer;
             });
             this.isChanged = false;
@@ -46,6 +58,11 @@ export class SkiDataComponent implements OnInit, DoCheck {
     }
     isNumeric(n) {
         return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    updateSkistyle(selectValue) {
+        this.userInput.skistyle = selectValue;
+        this.ngDoCheck();
     }
 }
 interface Answer {
