@@ -2,6 +2,6 @@
     constructor(
         public length: number,
         public age: number,
-        public classicOrFreestyle: string
+        public skistyle: string
     ) { }
 }

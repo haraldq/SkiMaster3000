@@ -1,16 +1,34 @@
-﻿<label for="length">Längd</label>
-<input type="text" class="form-control" id="length"
-        required
-        [(ngModel)]="userInput.length" name="length"
-        #length="ngModel">    
-<!--<div [hidden]="length.valid || length.pristine"
-        class="alert alert-danger">
-    Length is required
-</div>-->
-<label for="age">Ålder</label>
-<input type="text" class="form-control" id="age"
-       required
-       [(ngModel)]="userInput.age" name="age"
-       #age="ngModel">  
-<p>{{answer.skiLength}}</p>
-<p>{{answer.comment}}</p>
+﻿<div class="container">
+    <div class="form-group">
+        <label for="length">Längd</label>
+        <input type="text" class="form-control" id="length"
+               required
+               [(ngModel)]="userInput.length" name="length"
+               #length="ngModel">
+        <div [hidden]="length.valid || length.pristine"
+             class="alert alert-danger">
+            Längd måste vara ifyllt
+        </div>
+        <label for="age">Ålder</label>
+        <input type="text" class="form-control" id="age"
+               required
+               [(ngModel)]="userInput.age" name="age"
+               #age="ngModel">
+        <div [hidden]="age.valid || length.age"
+             class="alert alert-danger">
+            Ålder måste vara ifyllt
+        </div>
+        <select class="form-control" id="skistyle"
+                required
+                [(ngModel)]="userInput.skistyle" name="skistyle"
+                #skistyle="ngModel">
+            <option *ngFor="let s of skistyles" [value]="s">{{s}}</option>
+        </select>
+
+        <h4>-- Change Log --</h4>
+        <div *ngFor="let chg of changeLog">{{chg}}</div>
+
+        <p>{{answer.skiLength}}</p>
+        <p>{{answer.comment}}</p>
+    </div>
+</div>
