@@ -1,4 +1,6 @@
 ﻿<div class="container">
+    <h1>Ski Master 3000!</h1>
+    <h4>Ändra i fälten för direkt feedback.</h4>
     <div class="form-group">
         <label for="length">Längd (cm)</label>
         <input type="text" class="form-control" id="length"
@@ -22,17 +24,18 @@
                 Ålder måste vara ifyllt.
             </div>
         </div>
+        <label for="skistyle">Klassisk eller fristil</label>
         <select class="form-control" id="skistyle" (change)="updateSkistyle(skistyle.value)"
                 required
                 [(ngModel)]="userInput.skistyle" name="skistyle"
                 #skistyle="ngModel">
             <option *ngFor="let s of skistyles" [value]="s">{{s}}</option>
         </select>
-
+        <div class="answer">
+            <h4>{{answer.skiLength}}</h4>
+            <h5>{{answer.comment}}</h5>
+        </div>
         <h4>-- Change Log --</h4>
         <div *ngFor="let chg of changeLog">{{chg}}</div>
-
-        <p>{{answer.skiLength}}</p>
-        <p>{{answer.comment}}</p>
     </div>
 </div>

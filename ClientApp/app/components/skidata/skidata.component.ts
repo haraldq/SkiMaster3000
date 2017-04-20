@@ -5,7 +5,8 @@ import { UserInput } from "./UserInput"
 
 @Component({
     selector: 'skidata',
-    templateUrl: './skidata.component.html'
+    templateUrl: './skidata.component.html',
+    styleUrls: ['./skidata.component.css']
 })
 export class SkiDataComponent implements OnInit, DoCheck {
     @Input() userInput: UserInput;
