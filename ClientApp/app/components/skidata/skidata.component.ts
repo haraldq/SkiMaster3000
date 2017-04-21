@@ -21,7 +21,7 @@ export class SkiDataComponent implements OnInit, DoCheck {
 
     ngOnInit() {
         this.userInput = new UserInput(42, 35, this.skistyles[0]);
-        this.answer = { skiLength: 0, comment: "" };
+        this.answer = { skiLengthMax: 0, skiLengthMin: 0, comment: "" };
     }
 
     ngDoCheck() {
@@ -67,6 +67,7 @@ export class SkiDataComponent implements OnInit, DoCheck {
     }
 }
 interface Answer {
-    skiLength: number;
+    skiLengthMax: number;
+    skiLengthMin: number;
     comment: string;
 }

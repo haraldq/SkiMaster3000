@@ -6,9 +6,16 @@ namespace SkiMaster3000.Controllers
     public class SkiDataController : Controller
     {
         [HttpGet("[action]/{length}/{age}/{skistyle}")]
-        public Answer GetSkiLength(int length, int age, string skistyle)
+        public AnswerDto GetSkiLength(int length, int age, string skistyle)
         {
-            return new Answer { SkiLength = length + age, Comment = "yabba" + skistyle };
+            return new AnswerDto { SkiLengthMax = length + age, SkiLengthMin = 1, Comment = "yabba" + skistyle };
         }
+    }
+
+    public class AnswerDto
+    {
+        public int SkiLengthMax { get; set; }
+        public int SkiLengthMin { get; set; }
+        public string Comment { get; set; }
     }
 }

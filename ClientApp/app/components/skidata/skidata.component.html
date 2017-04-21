@@ -32,7 +32,7 @@
             <option *ngFor="let s of skistyles" [value]="s">{{s}}</option>
         </select>
         <div class="answer">
-            <h4>{{answer.skiLength}}</h4>
+            <h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm i längd.</h4>            
             <h5>{{answer.comment}}</h5>
         </div>
         <h4>-- Change Log --</h4>
