@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bb14c471e0851cd28018"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7b635927b1ea55801339"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9265,12 +9265,12 @@ var SkiDataComponent = (function () {
     };
     SkiDataComponent.prototype.ngDoCheck = function () {
         var _this = this;
-        if (this.isNumeric(this.userInput.length) && this.oldLength !== this.userInput.length) {
+        if (this.oldLength !== this.userInput.length) {
             this.changeLog.push(this.userInput.length + '!');
             this.oldLength = this.userInput.length;
             this.isChanged = true;
         }
-        if (this.isNumeric(this.userInput.age) && this.oldAge !== this.userInput.age) {
+        if (this.oldAge !== this.userInput.age) {
             this.oldAge = this.userInput.age;
             this.isChanged = true;
         }
@@ -9290,9 +9290,6 @@ var SkiDataComponent = (function () {
             });
             this.isChanged = false;
         }
-    };
-    SkiDataComponent.prototype.isNumeric = function (n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
     };
     SkiDataComponent.prototype.updateSkistyle = function (selectValue) {
         this.userInput.skistyle = selectValue;
@@ -9685,7 +9682,7 @@ module.exports = "<h1>Hello, world!</h1>";
 /* 61 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <h1>Ski Master 3000!</h1>\r\n    <h4>Ändra i fälten för direkt feedback.</h4>\r\n    <div class=\"form-group\">\r\n        <label for=\"length\">Längd (cm)</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"length\"\r\n               required maxlength=\"3\"\r\n               [(ngModel)]=\"userInput.length\" name=\"length\"\r\n               #length=\"ngModel\">\r\n        <div *ngIf=\"length.errors && (length.dirty || length.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!length.errors.required\">\r\n                Längd måste vara ifyllt.\r\n            </div>\r\n        </div>\r\n        <label for=\"age\">Ålder</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"age\"\r\n               required maxlength=\"3\"\r\n               [(ngModel)]=\"userInput.age\" name=\"age\"\r\n               #age=\"ngModel\">\r\n        <div *ngIf=\"age.errors && (age.dirty || age.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!age.errors.required\">\r\n                Ålder måste vara ifyllt.\r\n            </div>\r\n        </div>\r\n        <label for=\"skistyle\">Klassisk eller fristil</label>\r\n        <select class=\"form-control\" id=\"skistyle\" (change)=\"updateSkistyle(skistyle.value)\"\r\n                required\r\n                [(ngModel)]=\"userInput.skistyle\" name=\"skistyle\"\r\n                #skistyle=\"ngModel\">\r\n            <option *ngFor=\"let s of skistyles\" [value]=\"s\">{{s}}</option>\r\n        </select>\r\n        <div class=\"answer\">\r\n            <h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm i längd.</h4>            \r\n            <h5>{{answer.comment}}</h5>\r\n        </div>\r\n        <h4>-- Change Log --</h4>\r\n        <div *ngFor=\"let chg of changeLog\">{{chg}}</div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"container\">\r\n    <h1>Ski Master 3000!</h1>\r\n    <h4>Ändra i fälten för direkt feedback.</h4>\r\n    <div class=\"form-group\">\r\n        <label for=\"length\">Längd (cm)</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"length\"\r\n               required \r\n               maxlength=\"3\" \r\n               pattern=\"[0-9]*\"\r\n               [(ngModel)]=\"userInput.length\" name=\"length\"\r\n               #length=\"ngModel\">\r\n        <div *ngIf=\"length.errors && (length.dirty || length.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!length.errors.required\">\r\n                Längd måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!length.errors.pattern\">\r\n                Endast siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"age\">Ålder</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"age\"\r\n               required \r\n               maxlength=\"3\"\r\n               pattern=\"[0-9]*\"\r\n               [(ngModel)]=\"userInput.age\" name=\"age\"\r\n               #age=\"ngModel\">\r\n        <div *ngIf=\"age.errors && (age.dirty || age.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!age.errors.required\">\r\n                Ålder måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!age.errors.pattern\">\r\n                Endast siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"skistyle\">Klassisk eller fristil</label>\r\n        <select class=\"form-control\" id=\"skistyle\" (change)=\"updateSkistyle(skistyle.value)\"\r\n                required\r\n                [(ngModel)]=\"userInput.skistyle\" name=\"skistyle\"\r\n                #skistyle=\"ngModel\">\r\n            <option *ngFor=\"let s of skistyles\" [value]=\"s\">{{s}}</option>\r\n        </select>\r\n        <div class=\"answer\">\r\n            <h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm i längd.</h4>            \r\n            <h5>{{answer.comment}}</h5>\r\n        </div>\r\n        <h4>-- Change Log --</h4>\r\n        <div *ngFor=\"let chg of changeLog\">{{chg}}</div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 62 */

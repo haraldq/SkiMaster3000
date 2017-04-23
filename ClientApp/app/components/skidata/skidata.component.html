@@ -4,7 +4,9 @@
     <div class="form-group">
         <label for="length">Längd (cm)</label>
         <input type="text" class="form-control" id="length"
-               required maxlength="3"
+               required 
+               maxlength="3" 
+               pattern="[0-9]*"
                [(ngModel)]="userInput.length" name="length"
                #length="ngModel">
         <div *ngIf="length.errors && (length.dirty || length.touched)"
@@ -12,16 +14,24 @@
             <div [hidden]="!length.errors.required">
                 Längd måste vara ifyllt.
             </div>
+            <div [hidden]="!length.errors.pattern">
+                Endast siffror.
+            </div>
         </div>
         <label for="age">Ålder</label>
         <input type="text" class="form-control" id="age"
-               required maxlength="3"
+               required 
+               maxlength="3"
+               pattern="[0-9]*"
                [(ngModel)]="userInput.age" name="age"
                #age="ngModel">
         <div *ngIf="age.errors && (age.dirty || age.touched)"
              class="alert alert-danger">
             <div [hidden]="!age.errors.required">
                 Ålder måste vara ifyllt.
+            </div>
+            <div [hidden]="!age.errors.pattern">
+                Endast siffror.
             </div>
         </div>
         <label for="skistyle">Klassisk eller fristil</label>

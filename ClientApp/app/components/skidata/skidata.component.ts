@@ -26,13 +26,13 @@ export class SkiDataComponent implements OnInit, DoCheck {
 
     ngDoCheck() {
 
-        if (this.isNumeric(this.userInput.length) && this.oldLength !== this.userInput.length) {
+        if (this.oldLength !== this.userInput.length) {
             this.changeLog.push(this.userInput.length + '!');
             this.oldLength = this.userInput.length;
             this.isChanged = true;
         }
 
-        if (this.isNumeric(this.userInput.age) && this.oldAge !== this.userInput.age) {            
+        if (this.oldAge !== this.userInput.age) {            
             this.oldAge = this.userInput.age;
             this.isChanged = true;
         }
@@ -56,9 +56,6 @@ export class SkiDataComponent implements OnInit, DoCheck {
             });
             this.isChanged = false;
         }
-    }
-    isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
     }
 
     updateSkistyle(selectValue) {
