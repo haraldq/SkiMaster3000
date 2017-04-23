@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "86b23abf2ca54777fbf1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4eb727aacba89e7f5291"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9217,24 +9217,7 @@ exports.HomeComponent = HomeComponent;
 
 
 /***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var UserInput = (function () {
-    function UserInput(length, age, skistyle) {
-        this.length = length;
-        this.age = age;
-        this.skistyle = skistyle;
-    }
-    return UserInput;
-}());
-exports.UserInput = UserInput;
-
-
-/***/ }),
+/* 52 */,
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9252,7 +9235,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var http_1 = __webpack_require__(73);
-var UserInput_1 = __webpack_require__(52);
+var _UserInput_1 = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \".UserInput\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 var SkiDataComponent = (function () {
     function SkiDataComponent(http) {
         this.skistyles = ['Klassisk', 'Freestyle'];
@@ -9260,13 +9243,15 @@ var SkiDataComponent = (function () {
         this.http = http;
     }
     SkiDataComponent.prototype.ngOnInit = function () {
-        this.userInput = new UserInput_1.UserInput(42, 35, this.skistyles[0]);
+        this.userInput = new _UserInput_1.UserInput(42, 35, this.skistyles[0]);
+        this.cachedUserInput = this.userInput;
         this.answer = { skiLengthMax: 0, skiLengthMin: 0, comment: "" };
     };
     SkiDataComponent.prototype.ngDoCheck = function () {
         var _this = this;
-        if (this.oldLength !== this.userInput.length) {
+        if (this.cachedUserInput.Length !== this.userInput.length) {
             this.changeLog.push(this.userInput.length + '!');
+            this.cachedUserInput.Length = this.userInput.length;
             this.oldLength = this.userInput.length;
             this.isChanged = true;
         }
@@ -9299,7 +9284,7 @@ var SkiDataComponent = (function () {
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", UserInput_1.UserInput)
+    __metadata("design:type", typeof (_a = typeof _UserInput_1.UserInput !== "undefined" && _UserInput_1.UserInput) === "function" && _a || Object)
 ], SkiDataComponent.prototype, "userInput", void 0);
 SkiDataComponent = __decorate([
     core_1.Component({
@@ -9310,6 +9295,7 @@ SkiDataComponent = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], SkiDataComponent);
 exports.SkiDataComponent = SkiDataComponent;
+var _a;
 
 
 /***/ }),

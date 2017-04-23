@@ -2,7 +2,7 @@ namespace SkiMaster3000.Domain
 {
     public class Range
     {
-        public Range(int max, int min)
+        public Range(int min, int max)
         {
             Max = max;
             Min = min;
