@@ -3,10 +3,13 @@ using SkiMaster3000.Domain;
 
 namespace SkiMaster3000.Services
 {
-    public class SkiLengthCalculator
+    public class SkiLengthCalculator : ISkiLengthCalculator
     {
         public Answer Calculate(int age, int length, SkiStyle skistyle)
         {
+            if(age < 0 || length < 0)
+                throw new ArgumentException("Age and length cannot be a negative number.");
+
             int skiLength = length;
             Answer answer = new Answer(new Range(length,length), "");
             if (skistyle == SkiStyle.Classic)
@@ -42,5 +45,10 @@ namespace SkiMaster3000.Services
 
             return answer;
         }
+    }
+
+    public interface ISkiLengthCalculator
+    {
+        Answer Calculate(int age, int length, SkiStyle skistyle);
     }
 }

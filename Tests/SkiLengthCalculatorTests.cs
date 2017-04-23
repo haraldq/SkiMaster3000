@@ -1,3 +1,4 @@
+using System;
 using SkiMaster3000.Domain;
 using SkiMaster3000.Services;
 using Xunit;
@@ -71,9 +72,22 @@ namespace SkiMaster3000.Tests
         [Fact]
         public void Long_people_over_8_with_classic_ski_should_get_correct_ski_length_max()
         {
-            TestWithParameters(age: 50, length: 207, skistyle: SkiStyle.Classic,
+            TestWithParameters(age: 50, length: 215, skistyle: SkiStyle.Classic,
                 expectedSkiLengthMin: 207, expectedSkiLengthMax: 207,
                 expectedComment: "Klassiska skidor tillverkas bara till längder upp till 207cm.");
+        }
+
+        [Fact]
+        public void Years_below_0_should_throw_exception()
+        {
+            Assert.Throws<ArgumentException>(
+                () => new SkiLengthCalculator().Calculate(-1, 50, SkiStyle.Classic));
+        }
+        [Fact]
+        public void Age_below_0_should_throw_exception()
+        {
+            Assert.Throws<ArgumentException>(
+                () => new SkiLengthCalculator().Calculate(5, -1, SkiStyle.Classic));
         }
         private static void TestWithParameters(int age, int length, SkiStyle skistyle,
             int expectedSkiLengthMin, int expectedSkiLengthMax, string expectedComment)

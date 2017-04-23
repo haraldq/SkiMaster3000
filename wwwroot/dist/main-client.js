@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4eb727aacba89e7f5291"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "82e9bc880c3320340e1d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(80)(__webpack_require__.s = 80);
+/******/ 	return hotCreateRequire(79)(__webpack_require__.s = 79);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -749,7 +749,7 @@ var /** @type {?} */ NG_VALUE_ACCESSOR = new __WEBPACK_IMPORTED_MODULE_0__angula
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_collection__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facade_lang__ = __webpack_require__(8);
@@ -1349,7 +1349,7 @@ function NgControl_tsickle_Closure_declarations() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Subject__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
 /* unused harmony reexport Observable */
 /* unused harmony reexport Subject */
@@ -1698,7 +1698,7 @@ function escapeRegExp(s) {
     return s.replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
 }
 //# sourceMappingURL=lang.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(71)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(70)))
 
 /***/ }),
 /* 9 */
@@ -4007,7 +4007,7 @@ function NgSelectMultipleOption_tsickle_Closure_declarations() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_shared__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facade_async__ = __webpack_require__(7);
@@ -8177,11 +8177,11 @@ module.exports = (__webpack_require__(1))(334)
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(76);
+__webpack_require__(75);
 var core_1 = __webpack_require__(0);
 var angular2_universal_1 = __webpack_require__(37);
 var app_module_1 = __webpack_require__(49);
-__webpack_require__(77);
+__webpack_require__(76);
 var rootElemTagName = 'app'; // Update this if you change your root component selector
 // Enable either Hot Module Reloading or production mode
 if (true) {
@@ -8225,7 +8225,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(64);
+  var querystring = __webpack_require__(63);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -8345,11 +8345,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(66);
+  var strip = __webpack_require__(65);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(69);
+    overlay = __webpack_require__(68);
   }
 
   var styles = {
@@ -8402,7 +8402,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(70);
+var processUpdate = __webpack_require__(69);
 
 var customHandler;
 var subscribeAllHandler;
@@ -8467,7 +8467,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=%2F__webpack_hmr", __webpack_require__(79)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=%2F__webpack_hmr", __webpack_require__(78)(module)))
 
 /***/ }),
 /* 40 */
@@ -9125,12 +9125,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var router_1 = __webpack_require__(75);
+var router_1 = __webpack_require__(74);
 var forms_1 = __webpack_require__(41);
 var angular2_universal_1 = __webpack_require__(37);
 var app_component_1 = __webpack_require__(50);
 var home_component_1 = __webpack_require__(51);
-var skidata_component_1 = __webpack_require__(53);
+var skidata_component_1 = __webpack_require__(52);
 var AppModule = (function () {
     function AppModule() {
     }
@@ -9181,8 +9181,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'app',
-        template: __webpack_require__(59),
-        styles: [__webpack_require__(67)]
+        template: __webpack_require__(58),
+        styles: [__webpack_require__(66)]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
@@ -9210,15 +9210,14 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     core_1.Component({
         selector: 'home',
-        template: __webpack_require__(60)
+        template: __webpack_require__(59)
     })
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 
 
 /***/ }),
-/* 52 */,
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9234,28 +9233,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var http_1 = __webpack_require__(73);
-var _UserInput_1 = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \".UserInput\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var http_1 = __webpack_require__(72);
 var SkiDataComponent = (function () {
     function SkiDataComponent(http) {
         this.skistyles = ['Klassisk', 'Freestyle'];
-        this.changeLog = [];
         this.http = http;
     }
     SkiDataComponent.prototype.ngOnInit = function () {
-        this.userInput = new _UserInput_1.UserInput(42, 35, this.skistyles[0]);
-        this.cachedUserInput = this.userInput;
+        this.userInput = new UserInput(180, 35, this.skistyles[0]);
         this.answer = { skiLengthMax: 0, skiLengthMin: 0, comment: "" };
     };
     SkiDataComponent.prototype.ngDoCheck = function () {
         var _this = this;
-        if (this.cachedUserInput.Length !== this.userInput.length) {
-            this.changeLog.push(this.userInput.length + '!');
-            this.cachedUserInput.Length = this.userInput.length;
+        if (this.userInput.length > 0 && this.oldLength !== this.userInput.length) {
             this.oldLength = this.userInput.length;
             this.isChanged = true;
         }
-        if (this.oldAge !== this.userInput.age) {
+        if (this.userInput.age > 0 && this.oldAge !== this.userInput.age) {
             this.oldAge = this.userInput.age;
             this.isChanged = true;
         }
@@ -9264,12 +9258,10 @@ var SkiDataComponent = (function () {
             this.isChanged = true;
         }
         if (this.isChanged) {
-            this.changeLog.push('Calling!');
             var url = '/api/SkiData/GetSkiLength/' +
                 this.userInput.length.toString() + '/' +
                 this.userInput.age.toString() + '/' +
                 this.userInput.skistyle.toString();
-            this.changeLog.push('url = ' + url);
             this.http.get(url).subscribe(function (result) {
                 _this.answer = result.json();
             });
@@ -9284,22 +9276,30 @@ var SkiDataComponent = (function () {
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", typeof (_a = typeof _UserInput_1.UserInput !== "undefined" && _UserInput_1.UserInput) === "function" && _a || Object)
+    __metadata("design:type", UserInput)
 ], SkiDataComponent.prototype, "userInput", void 0);
 SkiDataComponent = __decorate([
     core_1.Component({
         selector: 'skidata',
-        template: __webpack_require__(61),
-        styles: [__webpack_require__(68)]
+        template: __webpack_require__(60),
+        styles: [__webpack_require__(67)]
     }),
     __metadata("design:paramtypes", [http_1.Http])
 ], SkiDataComponent);
 exports.SkiDataComponent = SkiDataComponent;
-var _a;
+var UserInput = (function () {
+    function UserInput(length, age, skistyle) {
+        this.length = length;
+        this.age = age;
+        this.skistyle = skistyle;
+    }
+    return UserInput;
+}());
+exports.UserInput = UserInput;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(34)();
@@ -9313,7 +9313,7 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(34)();
@@ -9321,25 +9321,25 @@ exports = module.exports = __webpack_require__(34)();
 
 
 // module
-exports.push([module.i, "/* Master Styles */\r\nh1 {\r\n    color: #369;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 250%;\r\n}\r\n\r\nh2, h3 {\r\n    color: #444;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-weight: lighter;\r\n}\r\n\r\nbody {\r\n    margin: 2em;\r\n}\r\n\r\nbody, input[text], button {\r\n    color: #888;\r\n    font-family: Cambria, Georgia;\r\n}\r\n\r\na {\r\n    cursor: pointer;\r\n    cursor: hand;\r\n}\r\n\r\nbutton {\r\n    font-family: Arial;\r\n    background-color: #eee;\r\n    border: none;\r\n    padding: 5px 10px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    cursor: hand;\r\n}\r\n\r\n    button:hover {\r\n        background-color: #cfd8dc;\r\n    }\r\n\r\n    button:disabled {\r\n        background-color: #eee;\r\n        color: #aaa;\r\n        cursor: auto;\r\n    }\r\n\r\n/* Navigation link styles */\r\nnav a {\r\n    padding: 5px 10px;\r\n    text-decoration: none;\r\n    margin-right: 10px;\r\n    margin-top: 10px;\r\n    display: inline-block;\r\n    background-color: #eee;\r\n    border-radius: 4px;\r\n}\r\n\r\n    nav a:visited, a:link {\r\n        color: #607D8B;\r\n    }\r\n\r\n    nav a:hover {\r\n        color: #039be5;\r\n        background-color: #CFD8DC;\r\n    }\r\n\r\n    nav a.active {\r\n        color: #039be5;\r\n    }\r\n\r\n    input, select {\r\n        width:150px;\r\n    }\r\n\r\n/* items class */\r\n.items {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 24em;\r\n}\r\n\r\n    .items li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        height: 1.6em;\r\n        border-radius: 4px;\r\n    }\r\n\r\n        .items li:hover {\r\n            color: #607D8B;\r\n            background-color: #DDD;\r\n            left: .1em;\r\n        }\r\n\r\n        .items li.selected {\r\n            background-color: #CFD8DC;\r\n            color: white;\r\n        }\r\n\r\n            .items li.selected:hover {\r\n                background-color: #BBD8DC;\r\n            }\r\n\r\n    .items .text {\r\n        position: relative;\r\n        top: -3px;\r\n    }\r\n\r\n    .items .badge {\r\n        display: inline-block;\r\n        font-size: small;\r\n        color: white;\r\n        padding: 0.8em 0.7em 0 0.7em;\r\n        background-color: #607D8B;\r\n        line-height: 1em;\r\n        position: relative;\r\n        left: -1px;\r\n        top: -4px;\r\n        height: 1.8em;\r\n        margin-right: .8em;\r\n        border-radius: 4px 0 0 4px;\r\n    }\r\n/* everywhere else */\r\n* {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n}\r\n\r\n.ng-valid[required], .ng-valid.required {\r\n    border-left: 5px solid #42A948; /* green */\r\n}\r\n\r\n.ng-invalid:not(form) {\r\n    border-left: 5px solid #a94442; /* red */\r\n}\r\n\r\n.answer {\r\n    border: 1px solid #ccc !important;\r\n    border-radius: 4px !important;\r\n    width: 400px;\r\n    overflow: hidden;\r\n    text-align: center;\r\n    margin: 10px 0 0 0;\r\n}", ""]);
+exports.push([module.i, "/* Master Styles */\r\nh1 {\r\n    color: #369;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 250%;\r\n}\r\n\r\nh2, h3 {\r\n    color: #444;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-weight: lighter;\r\n}\r\n\r\nbody {\r\n    margin: 2em;\r\n}\r\n\r\nbody, input[text], button {\r\n    color: #888;\r\n    font-family: Cambria, Georgia;\r\n}\r\n\r\na {\r\n    cursor: pointer;\r\n    cursor: hand;\r\n}\r\n\r\nbutton {\r\n    font-family: Arial;\r\n    background-color: #eee;\r\n    border: none;\r\n    padding: 5px 10px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    cursor: hand;\r\n}\r\n\r\n    button:hover {\r\n        background-color: #cfd8dc;\r\n    }\r\n\r\n    button:disabled {\r\n        background-color: #eee;\r\n        color: #aaa;\r\n        cursor: auto;\r\n    }\r\n\r\n/* Navigation link styles */\r\nnav a {\r\n    padding: 5px 10px;\r\n    text-decoration: none;\r\n    margin-right: 10px;\r\n    margin-top: 10px;\r\n    display: inline-block;\r\n    background-color: #eee;\r\n    border-radius: 4px;\r\n}\r\n\r\n    nav a:visited, a:link {\r\n        color: #607D8B;\r\n    }\r\n\r\n    nav a:hover {\r\n        color: #039be5;\r\n        background-color: #CFD8DC;\r\n    }\r\n\r\n    nav a.active {\r\n        color: #039be5;\r\n    }\r\n\r\n    input, select {\r\n        width:150px;\r\n    }\r\n\r\n/* items class */\r\n.items {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 24em;\r\n}\r\n\r\n    .items li {\r\n        cursor: pointer;\r\n        position: relative;\r\n        left: 0;\r\n        background-color: #EEE;\r\n        margin: .5em;\r\n        padding: .3em 0;\r\n        height: 1.6em;\r\n        border-radius: 4px;\r\n    }\r\n\r\n        .items li:hover {\r\n            color: #607D8B;\r\n            background-color: #DDD;\r\n            left: .1em;\r\n        }\r\n\r\n        .items li.selected {\r\n            background-color: #CFD8DC;\r\n            color: white;\r\n        }\r\n\r\n            .items li.selected:hover {\r\n                background-color: #BBD8DC;\r\n            }\r\n\r\n    .items .text {\r\n        position: relative;\r\n        top: -3px;\r\n    }\r\n\r\n    .items .badge {\r\n        display: inline-block;\r\n        font-size: small;\r\n        color: white;\r\n        padding: 0.8em 0.7em 0 0.7em;\r\n        background-color: #607D8B;\r\n        line-height: 1em;\r\n        position: relative;\r\n        left: -1px;\r\n        top: -4px;\r\n        height: 1.8em;\r\n        margin-right: .8em;\r\n        border-radius: 4px 0 0 4px;\r\n    }\r\n/* everywhere else */\r\n* {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n}\r\n\r\n.ng-valid[required], .ng-valid.required {\r\n    border-left: 5px solid #42A948; /* green */\r\n}\r\n\r\n.ng-invalid:not(form) {\r\n    border-left: 5px solid #a94442; /* red */\r\n}\r\n\r\n.answer {\r\n    border: 1px solid #ccc !important;\r\n    border-radius: 4px !important;\r\n    width: 450px;\r\n    overflow: hidden;\r\n    text-align: center;\r\n    margin: 10px 0 0 0;\r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(58),
-  Html4Entities: __webpack_require__(57),
+  XmlEntities: __webpack_require__(57),
+  Html4Entities: __webpack_require__(56),
   Html5Entities: __webpack_require__(35),
   AllHtmlEntities: __webpack_require__(35)
 };
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'Oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'oelig', 'oelig', 'scaron', 'scaron', 'yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -9492,7 +9492,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -9653,25 +9653,25 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class='container'>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n";
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = "<h1>Hello, world!</h1>";
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <h1>Ski Master 3000!</h1>\r\n    <h4>Ändra i fälten för direkt feedback.</h4>\r\n    <div class=\"form-group\">\r\n        <label for=\"length\">Längd (cm)</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"length\"\r\n               required \r\n               maxlength=\"3\" \r\n               pattern=\"[0-9]*\"\r\n               [(ngModel)]=\"userInput.length\" name=\"length\"\r\n               #length=\"ngModel\">\r\n        <div *ngIf=\"length.errors && (length.dirty || length.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!length.errors.required\">\r\n                Längd måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!length.errors.pattern\">\r\n                Endast siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"age\">Ålder</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"age\"\r\n               required \r\n               maxlength=\"3\"\r\n               pattern=\"[0-9]*\"\r\n               [(ngModel)]=\"userInput.age\" name=\"age\"\r\n               #age=\"ngModel\">\r\n        <div *ngIf=\"age.errors && (age.dirty || age.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!age.errors.required\">\r\n                Ålder måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!age.errors.pattern\">\r\n                Endast siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"skistyle\">Klassisk eller fristil</label>\r\n        <select class=\"form-control\" id=\"skistyle\" (change)=\"updateSkistyle(skistyle.value)\"\r\n                required\r\n                [(ngModel)]=\"userInput.skistyle\" name=\"skistyle\"\r\n                #skistyle=\"ngModel\">\r\n            <option *ngFor=\"let s of skistyles\" [value]=\"s\">{{s}}</option>\r\n        </select>\r\n        <div class=\"answer\">\r\n            <h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm i längd.</h4>            \r\n            <h5>{{answer.comment}}</h5>\r\n        </div>\r\n        <h4>-- Change Log --</h4>\r\n        <div *ngFor=\"let chg of changeLog\">{{chg}}</div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"container\">\r\n    <h1>Ski Master 3000!</h1>\r\n    <h4>Ändra i fälten för direkt feedback.</h4>\r\n    <div class=\"form-group\">\r\n        <label for=\"length\">Längd (cm)</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"length\"\r\n               required \r\n               maxlength=\"3\" \r\n               pattern=\"[1-9][0-9]*\"\r\n               [(ngModel)]=\"userInput.length\" name=\"length\"\r\n               #length=\"ngModel\">\r\n        <div *ngIf=\"length.errors && (length.dirty || length.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!length.errors.required\">\r\n                Längd måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!length.errors.pattern\">\r\n                Endast icke-negativa siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"age\">Ålder</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"age\"\r\n               required \r\n               maxlength=\"3\"\r\n               pattern=\"[1-9][0-9]?\"\r\n               [(ngModel)]=\"userInput.age\" name=\"age\"\r\n               #age=\"ngModel\">\r\n        <div *ngIf=\"age.errors && (age.dirty || age.touched)\"\r\n             class=\"alert alert-danger\">\r\n            <div [hidden]=\"!age.errors.required\">\r\n                Ålder måste vara ifyllt.\r\n            </div>\r\n            <div [hidden]=\"!age.errors.pattern\">\r\n                Endast icke-negativa siffror.\r\n            </div>\r\n        </div>\r\n        <label for=\"skistyle\">Klassisk eller fristil</label>\r\n        <select class=\"form-control\" id=\"skistyle\" (change)=\"updateSkistyle(skistyle.value)\"\r\n                required\r\n                [(ngModel)]=\"userInput.skistyle\" name=\"skistyle\"\r\n                #skistyle=\"ngModel\">\r\n            <option *ngFor=\"let s of skistyles\" [value]=\"s\">{{s}}</option>\r\n        </select>\r\n        <div class=\"answer\">\r\n            <div *ngIf=\"answer.skiLengthMin !== answer.skiLengthMax\"><h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm långa.</h4></div>\r\n            <div *ngIf=\"answer.skiLengthMin === answer.skiLengthMax\"><h4>Dina skidor bör vara {{answer.skiLengthMax}} cm långa.</h4></div>\r\n            <h5>{{answer.comment}}</h5>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9762,7 +9762,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9854,23 +9854,23 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.decode = exports.parse = __webpack_require__(61);
+exports.encode = exports.stringify = __webpack_require__(62);
+
+
+/***/ }),
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-exports.decode = exports.parse = __webpack_require__(62);
-exports.encode = exports.stringify = __webpack_require__(63);
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var root_1 = __webpack_require__(78);
+var root_1 = __webpack_require__(77);
 /* tslint:enable:max-line-length */
 /**
  * Converts an Observable sequence to a ES2015 compliant promise.
@@ -9943,7 +9943,7 @@ exports.toPromise = toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9954,6 +9954,20 @@ module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
 };
 
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(53);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
 
 /***/ }),
 /* 67 */
@@ -9971,20 +9985,6 @@ module.exports = function (str) {
 
 /***/ }),
 /* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(55);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -10028,7 +10028,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(56).AllHtmlEntities;
+var Entities = __webpack_require__(55).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -10069,7 +10069,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -10207,61 +10207,61 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(11)
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(13)
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(194)
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(316)
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(332)
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(333)
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(335)
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(47)
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(574)
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(40);

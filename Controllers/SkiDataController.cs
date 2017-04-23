@@ -1,21 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SkiMaster3000.Domain;
+using SkiMaster3000.Services;
 
 namespace SkiMaster3000.Controllers
 {
     [Route("api/[controller]")]
     public class SkiDataController : Controller
     {
-        [HttpGet("[action]/{length}/{age}/{skistyle}")]
-        public AnswerDto GetSkiLength(int length, int age, string skistyle)
-        {
-            return new AnswerDto { SkiLengthMax = length + age, SkiLengthMin = 1, Comment = "yabba" + skistyle };
-        }
-    }
+        private readonly ISkiLengthCalculator _skiLengthCalculator;
 
-    public class AnswerDto
-    {
-        public int SkiLengthMax { get; set; }
-        public int SkiLengthMin { get; set; }
-        public string Comment { get; set; }
+        public SkiDataController(ISkiLengthCalculator skiLengthCalculator)
+        {
+            _skiLengthCalculator = skiLengthCalculator;
+        }
+
+        [HttpGet("[action]/{length}/{age}/{skistyle}")]
+        public AnswerDto GetSkiLength(int length, int age, SkiStyle skistyle)
+        {
+            return AnswerDtoFactory.Create(_skiLengthCalculator.Calculate(age, length, skistyle));
+        }
     }
 }

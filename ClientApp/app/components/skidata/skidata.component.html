@@ -6,7 +6,7 @@
         <input type="text" class="form-control" id="length"
                required 
                maxlength="3" 
-               pattern="[0-9]*"
+               pattern="[1-9][0-9]*"
                [(ngModel)]="userInput.length" name="length"
                #length="ngModel">
         <div *ngIf="length.errors && (length.dirty || length.touched)"
@@ -15,14 +15,14 @@
                 Längd måste vara ifyllt.
             </div>
             <div [hidden]="!length.errors.pattern">
-                Endast siffror.
+                Endast icke-negativa siffror.
             </div>
         </div>
         <label for="age">Ålder</label>
         <input type="text" class="form-control" id="age"
                required 
                maxlength="3"
-               pattern="[0-9]*"
+               pattern="[1-9][0-9]?"
                [(ngModel)]="userInput.age" name="age"
                #age="ngModel">
         <div *ngIf="age.errors && (age.dirty || age.touched)"
@@ -31,7 +31,7 @@
                 Ålder måste vara ifyllt.
             </div>
             <div [hidden]="!age.errors.pattern">
-                Endast siffror.
+                Endast icke-negativa siffror.
             </div>
         </div>
         <label for="skistyle">Klassisk eller fristil</label>
@@ -42,10 +42,9 @@
             <option *ngFor="let s of skistyles" [value]="s">{{s}}</option>
         </select>
         <div class="answer">
-            <h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm i längd.</h4>            
+            <div *ngIf="answer.skiLengthMin !== answer.skiLengthMax"><h4>Dina skidor bör vara mellan {{answer.skiLengthMin}} och {{answer.skiLengthMax}} cm långa.</h4></div>
+            <div *ngIf="answer.skiLengthMin === answer.skiLengthMax"><h4>Dina skidor bör vara {{answer.skiLengthMax}} cm långa.</h4></div>
             <h5>{{answer.comment}}</h5>
         </div>
-        <h4>-- Change Log --</h4>
-        <div *ngFor="let chg of changeLog">{{chg}}</div>
     </div>
 </div>

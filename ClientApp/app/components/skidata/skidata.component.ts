@@ -1,8 +1,6 @@
 ﻿import { Component, OnInit, DoCheck, SimpleChanges, Input } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
-import { UserInput } from "./UserInput"
-
 @Component({
     selector: 'skidata',
     templateUrl: './skidata.component.html',
@@ -12,30 +10,30 @@ export class SkiDataComponent implements OnInit, DoCheck {
     @Input() userInput: UserInput;
     public answer: Answer;
     public skistyles = ['Klassisk', 'Freestyle'];
-    changeLog: string[] = [];
-    oldLength; oldAge; oldSkistyle; isChanged; http;
+    oldLength; oldAge; oldSkistyle; isChanged;
+    http;
 
     constructor(http: Http) {
         this.http = http;
     }
 
     ngOnInit() {
-        this.userInput = new UserInput(42, 35, this.skistyles[0]);
+        this.userInput = new UserInput(180, 35, this.skistyles[0]);
         this.answer = { skiLengthMax: 0, skiLengthMin: 0, comment: "" };
     }
 
     ngDoCheck() {
 
-        if (this.oldLength !== this.userInput.length) {
-            this.changeLog.push(this.userInput.length + '!');
+        if (this.userInput.length > 0 && this.oldLength !== this.userInput.length) {
             this.oldLength = this.userInput.length;
             this.isChanged = true;
         }
 
-        if (this.oldAge !== this.userInput.age) {            
+        if (this.userInput.age > 0 && this.oldAge !== this.userInput.age) {            
             this.oldAge = this.userInput.age;
             this.isChanged = true;
         }
+
 
         if (this.oldSkistyle !== this.userInput.skistyle) {
             this.oldSkistyle = this.userInput.skistyle;
@@ -43,13 +41,10 @@ export class SkiDataComponent implements OnInit, DoCheck {
         }
 
         if (this.isChanged) {
-            this.changeLog.push('Calling!');
             var url = '/api/SkiData/GetSkiLength/' +
                 this.userInput.length.toString() + '/' +
                 this.userInput.age.toString() + '/' +
                 this.userInput.skistyle.toString();
-
-            this.changeLog.push('url = '  + url);
 
             this.http.get(url).subscribe(result => {
                 this.answer = result.json() as Answer;
@@ -67,4 +62,11 @@ interface Answer {
     skiLengthMax: number;
     skiLengthMin: number;
     comment: string;
+}
+export class UserInput {
+    constructor(
+        public length: number,
+        public age: number,
+        public skistyle: string
+    ) { }
 }
