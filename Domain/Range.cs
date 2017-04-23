@@ -8,7 +8,7 @@ namespace SkiMaster3000.Domain
             Min = min;
         }
 
-        public int Max { get; }
-        public int Min { get; }
+        public int Max { get; set; }
+        public int Min { get; set; }
     }
 }

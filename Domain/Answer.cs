@@ -8,7 +8,7 @@
             Comment = comment;
         }
 
-        public Range SkiLength { get; }
-        public string Comment { get; }
+        public Range SkiLength { get; set; }
+        public string Comment { get; set; }
     }
 }
