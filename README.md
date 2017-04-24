@@ -9,4 +9,5 @@ From bash:
 1. dotnet restore
 2. npm install 
 3. setx ASPNETCORE_ENVIRONMENT "Development" /M
-4. start SkiMaster3000.csproj
+4. webpack --config webpack.config.vendor.js
+5. start SkiMaster3000.csproj
